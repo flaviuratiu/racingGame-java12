@@ -64,6 +64,8 @@ public class App {
         car2.accelerate(100);
 
         new AutoVehicle();
+
+        new Car();
     }
 
 }
