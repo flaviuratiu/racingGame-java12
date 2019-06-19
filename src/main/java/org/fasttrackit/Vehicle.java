@@ -4,14 +4,14 @@ import java.time.LocalDate;
 
 public class Vehicle {
 
-    String name;
-    double mileage;
-    String color;
-    double maxSpeed;
-    boolean running;
-    double fuelLevel;
-    double traveledDistance;
-    LocalDate createdDate;
+    private String name;
+    private double mileage;
+    private String color;
+    private double maxSpeed;
+    private boolean running;
+    private double fuelLevel;
+    private double traveledDistance;
+    private LocalDate createdDate;
 
     public double accelerate(double speed, double durationInHours) {
         // concatenation
@@ -36,5 +36,69 @@ public class Vehicle {
         System.out.println("Remaining fuel: " + fuelLevel + " l.");
 
         return distance;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getMileage() {
+        return mileage;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public double getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public boolean isRunning() {
+        return running;
+    }
+
+    public double getFuelLevel() {
+        return fuelLevel;
+    }
+
+    public double getTraveledDistance() {
+        return traveledDistance;
+    }
+
+    public LocalDate getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setName(String name) {
+        this.name = name.trim();
+    }
+
+    public void setMileage(double mileage) {
+        this.mileage = mileage;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setMaxSpeed(double maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public void setRunning(boolean running) {
+        this.running = running;
+    }
+
+    public void setFuelLevel(double fuelLevel) {
+        this.fuelLevel = fuelLevel;
+    }
+
+    public void setTraveledDistance(double traveledDistance) {
+        this.traveledDistance = traveledDistance;
+    }
+
+    public void setCreatedDate(LocalDate createdDate) {
+        this.createdDate = createdDate;
     }
 }
