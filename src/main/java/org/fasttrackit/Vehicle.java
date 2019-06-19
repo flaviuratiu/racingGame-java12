@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 public class Vehicle {
 
+    private static int totalCount;
+
     private String name;
     private double mileage;
     private String color;
@@ -12,6 +14,10 @@ public class Vehicle {
     private double fuelLevel;
     private double traveledDistance;
     private LocalDate createdDate;
+
+    public Vehicle() {
+        totalCount++;
+    }
 
     public double accelerate(double speed, double durationInHours) {
         // concatenation
@@ -100,5 +106,9 @@ public class Vehicle {
 
     public void setCreatedDate(LocalDate createdDate) {
         this.createdDate = createdDate;
+    }
+
+    public static int getTotalCount() {
+        return totalCount;
     }
 }
