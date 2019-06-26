@@ -15,4 +15,12 @@ public class Car extends AutoVehicle {
     public Car() {
         // any constructor will try to call the "no-parameter" constructor of the parent class
     }
+
+    public int getDoorCount() {
+        return doorCount;
+    }
+
+    public void setDoorCount(int doorCount) {
+        this.doorCount = doorCount;
+    }
 }
