@@ -150,4 +150,41 @@ public class Vehicle {
                 ", createdDate=" + createdDate +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Vehicle vehicle = (Vehicle) o;
+
+        if (Double.compare(vehicle.mileage, mileage) != 0) return false;
+        if (Double.compare(vehicle.maxSpeed, maxSpeed) != 0) return false;
+        if (running != vehicle.running) return false;
+        if (Double.compare(vehicle.fuelLevel, fuelLevel) != 0) return false;
+        if (Double.compare(vehicle.traveledDistance, traveledDistance) != 0) return false;
+        if (name != null ? !name.equals(vehicle.name) : vehicle.name != null) return false;
+        if (color != null ? !color.equals(vehicle.color) : vehicle.color != null) return false;
+        return createdDate != null ? createdDate.equals(vehicle.createdDate) : vehicle.createdDate == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = name != null ? name.hashCode() : 0;
+        temp = Double.doubleToLongBits(mileage);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (color != null ? color.hashCode() : 0);
+        temp = Double.doubleToLongBits(maxSpeed);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (running ? 1 : 0);
+        temp = Double.doubleToLongBits(fuelLevel);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(traveledDistance);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (createdDate != null ? createdDate.hashCode() : 0);
+        return result;
+    }
 }
