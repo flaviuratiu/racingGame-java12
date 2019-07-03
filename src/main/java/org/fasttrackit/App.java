@@ -5,8 +5,8 @@ package org.fasttrackit;
  */
 public class App {
     public static void main(String[] args) {
-//        Game game = new Game();
-//        game.start();
+        Game game = new Game();
+        game.start();
 
 //        // String pool
 //        String a = "test";
@@ -17,15 +17,15 @@ public class App {
 //        System.out.println(a == c);
 //        System.out.println(a.equals(c));
 
-
-        Vehicle vehicle1 = new Vehicle();
-        vehicle1.setName("Dacia");
-
-        Vehicle vehicle2 = new Vehicle();
-        vehicle2.setName("Dacia");
-
-        System.out.println(vehicle1 == vehicle2);
-        System.out.println(vehicle1.equals(vehicle2));
+//
+//        Vehicle vehicle1 = new Vehicle();
+//        vehicle1.setName("Dacia");
+//
+//        Vehicle vehicle2 = new Vehicle();
+//        vehicle2.setName("Dacia");
+//
+//        System.out.println(vehicle1 == vehicle2);
+//        System.out.println(vehicle1.equals(vehicle2));
 
 
 //        Engine engine = new Engine();
