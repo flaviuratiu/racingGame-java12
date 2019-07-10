@@ -15,6 +15,8 @@ public class Game {
         initializeTracks();
         displayTracks();
 
+        Track selectedTrack = getTrackSelectedByUser();
+
         int competitorCount = getCompetitorCountFromUser();
 
         for (int i = 0; i < competitorCount; i++) {
@@ -22,6 +24,24 @@ public class Game {
         }
 
         displayCompetitors();
+    }
+
+    private Track getTrackSelectedByUser() {
+        System.out.println("Please enter track number:");
+        try {
+            Scanner scanner = new Scanner(System.in);
+            int trackNumber = scanner.nextInt();
+
+            Track track = tracks[trackNumber - 1];
+
+            System.out.println("Selected track: " + track.getName());
+            return track;
+        } catch (InputMismatchException | ArrayIndexOutOfBoundsException e) {
+            System.out.println("You entered an invalid track number. Please try again...");
+
+            // recursion - a method invoking itself
+            return getTrackSelectedByUser();
+        }
     }
 
     private void addCompetitor() {
